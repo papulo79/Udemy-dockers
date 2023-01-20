@@ -1,3 +1,29 @@
+# Pablo De Andrés
+
+## Instructions
+
+Requeriments
+
+> Install docker-ce on your system
+
+Create the image from Dockerfile
+
+> docker build -t captaction-php ./
+
+Duplicate .env.example and rename it to .env
+
+Generate encryption key
+
+> docker run --rm -it -p 8090:8000 -v "$(pwd)":/app captaction-php php artisan key:generate
+
+Start the server
+
+> docker run --rm -it -p 8090:8000 -v "$(pwd)":/app captaction-php php artisan serve --host=0.0.0.0
+
+Access using localhost:8090
+
+> http://localhost:8090/
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
