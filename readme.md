@@ -24,6 +24,10 @@ Access on localhost:8090
 
 > http://localhost:8090/
 
+Theme installed and docker-compose.yml created
+
+![The magic](https://github.com/papulo79/Udemy-dockers/resources/Coming_Soon-Start_Bootstrap_Theme.png?raw=true)
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
