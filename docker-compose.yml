@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    image: captaction-php
+    ports:
+      - "8090:8000"
+    volumes:
+      - ./:/app
+    command: php artisan serve --host=0.0.0.0

@@ -20,7 +20,7 @@ Start the server
 
 > docker run --rm -it -p 8090:8000 -v "$(pwd)":/app captaction-php php artisan serve --host=0.0.0.0
 
-Access using localhost:8090
+Access on localhost:8090
 
 > http://localhost:8090/
 
