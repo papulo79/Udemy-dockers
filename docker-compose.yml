@@ -8,6 +8,9 @@ services:
     volumes:
       - ./:/app
     command: php artisan serve --host=0.0.0.0
+    links:
+      - mysql
+      - mailtrap
 
   mysql:
     image: mysql:5.7
@@ -17,6 +20,11 @@ services:
       - MYSQL_ROOT_PASSWORD=toor
     volumes:
       - mysql-data:/var/lib/mysql
+    
+  mailtrap:
+    image: eaudeweb/mailtrap
+    ports:
+      - '8086:80'
 
 volumes:
   mysql-data:

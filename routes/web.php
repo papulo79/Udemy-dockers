@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,4 +16,9 @@
 Route::get('/', function () {
     return view('index');
     // return view('welcome');
+});
+
+Route::get('/email', function (Request $request) {
+    $email = App\Email::updateOrCreate($request->all());
+    return sprintf('¡Gracias por contactar, %s! <a href="/">Inicio</a>', $email->email);
 });
